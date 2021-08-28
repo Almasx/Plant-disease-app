@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_disease_app/config/themes/theme.dart';
+import 'package:plant_disease_app/pages/detailsPage.dart';
 import 'package:plant_disease_app/pages/homePage.dart';
 import 'package:provider/provider.dart';
 
@@ -25,13 +26,13 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               themeMode: themeProvider.themeMode,
               theme: AppTheme.lightTheme,
               darkTheme: AppTheme.darkTheme,
-              home: HomePage(),
+              home: DetailsPage(),
               onGenerateRoute: (settings) {
                 switch (settings.name) {
                   case HomePage.route:
                     return MaterialPageRoute(builder: (_) => HomePage());
-                  //     case AccountPage.route:
-                  //       return MaterialPageRoute(builder: (_) => AccountPage());
+                  // case DetailsPage.route:
+                  //   return MaterialPageRoute(builder: (_) => DetailsPage());
                   //     // default:
                   //     //   return MaterialPageRoute(builder: (_) => LoginScreen());
                 }
